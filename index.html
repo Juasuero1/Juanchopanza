@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Más Buscado: GODOS</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .banner {
+      width: 360px;
+      max-height: 180vh;
+      object-fit: contain;
+    }
+    .cartel {
+      background-color: #1e1e1e;
+      border: 3px solid limegreen;
+      border-radius: 15px;
+      padding: 25px 40px;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+    }
+    h1 {
+      color: #00ff88;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+    }
+    h1:hover {
+      color: #7affc7;
+      transform: scale(1.05);
+    }
+    h2 {
+      font-size: 22px;
+      color: gold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    p {
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .recompensa {
+      margin-top: 20px;
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+    .recompensa:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Estandarte izquierdo -->
+<img src="imagen3.png" alt="Estandarte izquierdo" class="banner">
+
+<!-- Cartel central -->
+<div class="cartel">
+  <h1 onclick="reproducirAudio()">🌟 MÁS BUSCADO: <span id="nombre">GODOS</span></h1>
+  <h2>Demasiado bueno para estar en soloQ</h2>
+
+  <p><strong>Alias:</strong> “El Cazador Imparable”</p>
+  <p><strong>Última vez visto:</strong> Acechando la grieta con Kindred, one-shot con Miss Fortune, y partiendo caras con Sett</p>
+  <p><strong>Campeones favoritos:</strong> Kindred 🐺, Sett 👊, Miss Fortune 💥</p>
+  <p><strong>Rango real:</strong> Challenger disfrazado de Platino para no humillar</p>
+
+  <p><strong>Estilo de juego:</strong></p>
+  <ul>
+    <li>Hace Pentakill y te deja con ganas de aplaudir.</li>
+    <li>Campea sin necesidad de pedir ayuda: él es el carry.</li>
+    <li>Hace engage, se salva y encima te roba el dragón.</li>
+    <li>Gana 1v3 mientras farmea mejor que tu ADC.</li>
+    <li>El enemigo lo reporta por "ser smurf".</li>
+  </ul>
+
+  <a href="https://op.gg/es/lol/summoners/las/juanchopanza-8985" target="_blank" class="recompensa">
+    +1 skin si logras detenerlo antes del minuto 15
+  </a>
+</div>
+
+<!-- Estandarte derecho -->
+<img src="imagen3.png" alt="Estandarte derecho" class="banner">
+
+<!-- Audio del Pentakill -->
+<audio id="penta-audio">
+  <source src="pentakill.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+<script>
+  function reproducirAudio() {
+    const audio = document.getElementById('penta-audio');
+    audio.currentTime = 0;
+    audio.play();
+  }
+</script>
+
+</body>
+</html>
